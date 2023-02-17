@@ -1,0 +1,24 @@
+{
+	"name": "chatgpt-terminal-assistant",
+	"version": "1.0.0",
+	"description": "ChatGPT api in the terminal",
+	"main": "generate.js",
+	"type": "module",
+	"scripts": {
+		"build": "tsc --build",
+		"start": "tsc",
+		"postbuild": "cp package*.json .env dist && cd dist && npm ci --omit=dev"
+	},
+	"author": "Nooa Lumilaakso",
+	"license": "ISC",
+	"dependencies": {
+		"dotenv": "^16.0.3",
+		"enquirer": "^2.3.6",
+		"openai": "^3.1.0",
+		"ora": "^6.1.2"
+	},
+	"devDependencies": {
+		"@types/node": "^18.13.0",
+		"typescript": "^4.9.5"
+	}
+}
