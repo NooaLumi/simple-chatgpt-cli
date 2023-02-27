@@ -1,5 +1,11 @@
 import * as dotenv from "dotenv";
-dotenv.config();
+import path, { dirname } from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+
+dotenv.config({ path: path.join(__dirname, ".env") });
 
 const OPENAI_API_KEY: string = process.env.OPENAI_API_KEY;
 const MIN_QUESTION_LENGTH: number = Number(process.env.MIN_QUESTION_LENGTH) ?? 10;
