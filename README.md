@@ -1,6 +1,6 @@
 # Simple CLI for ChatGPT
 
-This is a very simple command line interface for ChatGPT built using node
+This is a very simple commandline interface for the OpenAI ChatGPT API built using node
 
 ## Requirements
 
